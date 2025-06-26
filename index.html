@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futuristic Portfolio - Yogi Sadewa</title>
+  <style>
+    :root {
+      --bg-dark: #0f0f1a;
+      --bg-light: #f4f4f4;
+      --text-dark: #00ffe7;
+      --text-light: #222;
+      --accent: #ff00f7;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #141429;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--text-dark);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--text-dark);
+      text-shadow: 0 0 10px var(--text-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 5px var(--accent);
+    }
+
+    .toggle-btn {
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: 2px solid var(--text-dark);
+      border-radius: 8px;
+      color: var(--text-dark);
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background-color: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #0f0f1a, #1a0033);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px var(--text-dark);
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      border-top: 1px solid #333;
+    }
+
+    .section h2 {
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    ul li {
+      margin-left: 1.5rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #141429;
+      border-top: 1px solid var(--text-dark);
+    }
+
+    /* Light Mode */
+    body.light {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    body.light .navbar,
+    body.light footer {
+      background-color: #fff;
+      border-color: var(--text-light);
+    }
+
+    body.light .logo,
+    body.light .nav-links a,
+    body.light .toggle-btn {
+      color: var(--text-light);
+      border-color: var(--text-light);
+    }
+
+    body.light .toggle-btn:hover {
+      background-color: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    body.light .hero {
+      background: linear-gradient(to right, #eee, #ccc);
+    }
+
+    body.light .section h2 {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Yogi Sadewa</div>
+    <ul class="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="toggle-btn" onclick="toggleTheme()">☀️/🌙</button>
+  </nav>
+
+  <header class="hero">
+    <h1>Welcome to My Futuristic Portfolio</h1>
+    <p>Senior Project Manager & ERP Specialist</p>
+  </header>
+
+  <section id="profile" class="section">
+    <h2>Profile</h2>
+    <p>Experienced in ERP Systems including Microsoft Dynamics, SAP, and Odoo. Passionate about project delivery and stakeholder satisfaction.</p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Microsoft Dynamics AX / 365 FO</li>
+      <li>Project Management (Waterfall, Scrum)</li>
+      <li>SQL Server, Business Analysis</li>
+      <li>SDLC, Documentation (UAT, Blueprint, etc.)</li>
+    </ul>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <p>Over a decade of hands-on experience implementing ERP systems for companies in manufacturing, retail, and logistics sectors.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: yogisadew@gmail.com</p>
+    <p>Phone: +62 822-2900-6586</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yogisadewa/" target="_blank" style="color: var(--accent)">yogisadewa</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yogi Sadewa. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light");
+    }
+    console.log("Futuristic mode activated 🚀");
+  </script>
+</body>
+</html>
