@@ -147,11 +147,15 @@
             padding: 60px 0;
         }
 
-        .content-section:nth-child(odd) {
+        main > .content-section:nth-child(odd) {
             background-color: var(--secondary-color);
         }
+        
+        main > .content-section:nth-child(even) {
+            background-color: var(--primary-color);
+        }
 
-        h2 {
+        h2.section-title {
             text-align: center;
             font-size: 2.5rem;
             font-family: var(--header-font);
@@ -160,7 +164,7 @@
             position: relative;
         }
 
-        h2::after {
+        h2.section-title::after {
             content: '';
             display: block;
             width: 60px;
@@ -269,6 +273,43 @@
             display: block;
         }
 
+        /* Project Experience Section */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .project-industry {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+
         /* Skills Section */
         .skills-container {
             display: grid;
@@ -359,6 +400,10 @@
                 justify-content: center;
             }
 
+            header ul li {
+                padding: 0.2rem 0.5rem;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -396,6 +441,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -415,7 +461,7 @@
 
         <section id="about" class="content-section">
             <div class="container">
-                <h2>About Me</h2>
+                <h2 class="section-title">About Me</h2>
                 <div class="about-container">
                     <div class="about-text">
                         <p>A seasoned Senior Project Manager with a comprehensive understanding of ERP systems, particularly Microsoft Dynamics. I possess extensive experience within the IT and manufacturing sectors, backed by a proven track record in successful project delivery. My expertise lies in managing implementations, support, and integration of business application systems, ensuring projects are completed on time and within budget while leading cross-functional teams to achieve strategic goals.</p>
@@ -431,7 +477,7 @@
 
         <section id="experience" class="content-section">
             <div class="container">
-                <h2>Work Experience</h2>
+                <h2 class="section-title">Work Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-content">
@@ -486,9 +532,47 @@
             </div>
         </section>
 
+        <section id="projects" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Project Experience</h2>
+                <div class="project-grid">
+                    <div class="project-card"><h3>PT Sator Gourmet Selaras</h3><p class="project-industry">Retail</p></div>
+                    <div class="project-card"><h3>PT Solvay Manyar</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Sariguna Primatirta</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Mikatasa Agung</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Integra Group</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Integriya Dekorindo</h3><p class="project-industry">Retail</p></div>
+                    <div class="project-card"><h3>PT ETA</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Akasha Wira International</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Guna Layan Kuasa</h3><p class="project-industry">Trade & Logistic</p></div>
+                    <div class="project-card"><h3>PT Sorini Towa Berlian Corporindo</h3><p class="project-industry">Trade & Logistic</p></div>
+                    <div class="project-card"><h3>PT Indo Asia Tirta Manunggal</h3><p class="project-industry">Trade & Logistic</p></div>
+                    <div class="project-card"><h3>PT Adaro</h3><p class="project-industry">Engineering</p></div>
+                    <div class="project-card"><h3>PT United Dico Citas</h3><p class="project-industry">Trade & Logistic</p></div>
+                    <div class="project-card"><h3>PT Tanjung Power Indonesia</h3><p class="project-industry">Engineering</p></div>
+                    <div class="project-card"><h3>PT Hino Finance</h3><p class="project-industry">Finance</p></div>
+                    <div class="project-card"><h3>PT Sebastian Jaya Metal</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Bridgestone Mining Solutions Indonesia</h3><p class="project-industry">Mining</p></div>
+                    <div class="project-card"><h3>PT Sekisui Polymatech Indonesia</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Yamaha Part Manufacture Indonesia</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Duniatex</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT NOK Indonesia</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Sebuku Iron</h3><p class="project-industry">Mining</p></div>
+                    <div class="project-card"><h3>PT Kabel Optics Indonesia</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Triputra Electric Abadi</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Kabel Enamel Indonesia</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Arina Multikarya</h3><p class="project-industry">Outsource</p></div>
+                    <div class="project-card"><h3>PT Pancaputra Satriawibawa</h3><p class="project-industry">Manufacture</p></div>
+                    <div class="project-card"><h3>PT Aneka Dharma Persada</h3><p class="project-industry">Rent</p></div>
+                    <div class="project-card"><h3>PT MPM Rent</h3><p class="project-industry">Rent</p></div>
+                </div>
+            </div>
+        </section>
+
+
         <section id="skills" class="content-section">
             <div class="container">
-                <h2>Skills & Certifications</h2>
+                <h2 class="section-title">Skills & Certifications</h2>
                 <div class="skills-container">
                     <div class="skill-category">
                         <h3>ERP & Business Process</h3>
@@ -537,7 +621,7 @@
 
         <section id="contact" class="content-section">
             <div class="container">
-                <h2>Contact Information</h2>
+                <h2 class="section-title">Contact Information</h2>
                 <div class="contact-info">
                     <p><strong>Address:</strong> Perumahan Delta Mandala DM II No.162, Semambung, Sidoarjo, 61254, Indonesia</p>
                     <p><strong>Phone:</strong> <a href="tel:+6282229006586 or +6287854444595">+62 822-2900-6586 or +62 878-5444-4595</a></p>
@@ -574,7 +658,7 @@
             }
 
             // Add animation to sections on scroll
-            const sections = document.querySelectorAll('.content-section');
+            const animatedElements = document.querySelectorAll('.content-section, .timeline-item, .project-card');
 
             const observerOptions = {
                 root: null,
@@ -586,35 +670,15 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.animation = `fadeIn 1s ease-out forwards`;
-                        entry.target.style.opacity = 0; // Set initial opacity for animation
                         observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            sections.forEach(section => {
-                section.style.opacity = 0; // Prepare for animation
-                observer.observe(section);
+            animatedElements.forEach(el => {
+                el.style.opacity = 0; // Prepare for animation
+                observer.observe(el);
             });
-            
-            // Add scroll animation to timeline items
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            
-            const timelineObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animation = `fadeIn 1s ease-out forwards`;
-                         entry.target.style.opacity = 0;
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            timelineItems.forEach(item => {
-                item.style.opacity = 0; // Prepare for animation
-                timelineObserver.observe(item);
-            });
-
         });
     </script>
 </body>
